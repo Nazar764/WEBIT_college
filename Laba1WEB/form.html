@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запропонувати місто</title>
+</head>
+<body>
+
+    <header>
+        <h1>Запропонувати місто для наступного рейтингу</h1>
+        <nav>
+            <a href="index.html">Головна</a> | 
+            <a href="city-vid.html">Відень</a> | 
+            <a href="city-barselon.html">Барселон</a> | 
+            <a href="city-osaka.html">Осака</a> | 
+            <a href="form.html">Запропонувати місто</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section>
+            <h2>Форма пропозиції міста</h2>
+            <form action="#" method="post">
+                <p>
+                    <label for="userName">Ваше ім'я:</label><br>
+                    <input type="text" id="userName" name="userName" required placeholder="Введіть ваше ім'я">
+                </p>
+
+                <p>
+                    <label for="userEmail">Ваш Email:</label><br>
+                    <input type="email" id="userEmail" name="userEmail" required placeholder="example@mail.com">
+                </p>
+
+                <p>
+                    <label for="cityName">Назва міста:</label><br>
+                    <input type="text" id="cityName" name="cityName" required placeholder="Введіть назву міста">
+                </p>
+
+                <p>
+                    <label for="country">Країна або регіон:</label><br>
+                    <select id="country" name="country" required>
+                        <option value="">-- Оберіть варіант --</option>
+                        <option value="ukraine">Україна</option>
+                        <option value="europe">Європа</option>
+                        <option value="asia">Азія</option>
+                        <option value="america">Америка</option>
+                        <option value="other">Інше</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="reason">Чому це місто має потрапити до рейтингу?:</label><br>
+                    <textarea id="reason" name="reason" rows="5" cols="40" required placeholder="Опишіть ваші враження, цікаві місця або факти..."></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Надіслати</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><a href="index.html">← Повернутися на головну</a></p>
+    </footer>
+
+</body>
+</html>
