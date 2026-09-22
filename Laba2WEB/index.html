@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акустична варта — Моніторинг шуму</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайту -->
+    <header id="main-header">
+        <h1>Акустична варта</h1>
+        <p class="tagline">Сервіс професійного моніторингу шумового забруднення міських територій</p>
+        <nav>
+            <ul>
+                <li><a href="#about">Про нас</a></li>
+                <li><a href="#monitoring">Моніторинг</a></li>
+                <li><a href="#services">Напрямки</a></li>
+                <li><a href="#measurements">Заміри</a></li>
+                <li><a href="#order">Замовити</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Вступ -->
+        <section id="about" class="section-block">
+            <h2>Про компанію</h2>
+            <p id="company-description" class="text-description">
+                «Акустична варта» встановлює тимчасові акустичні датчики, проводити вимірювання рівня шуму та формує аналітичні звіти для житлових комплексів, офісних центрів і підприємств.
+            </p>
+            <p class="text-description">
+                Ми допомагаємо контролювати екологічний стан міського середовища та відповідати санітарним нормам.
+            </p>
+            <div class="image-wrapper">
+                <img src="image/2_lab.png" alt="Акустичний моніторинг" class="section-img">
+            </div>
+        </section>
+
+        <!-- Поточний моніторинг -->
+        <section id="monitoring" class="section-block">
+            <h2>Поточний моніторинг</h2>
+            <div class="monitoring-card">
+                <p><strong>Об’єкт:</strong> ЖК «Тихий Квартал»</p>
+                <p><strong>Статус:</strong> Активний</p>
+                <p><strong>Середній рівень:</strong> 58 дБ</p>
+                <p><strong>Період:</strong> 12.10 — 19.10</p>
+                <p><strong>Кількість точек:</strong> 4 датчики</p>
+                <div class="sensor-badge">Датчик #1 Active</div>
+            </div>
+        </section>
+
+        <!-- Напрямки роботи -->
+        <section id="services" class="section-block">
+            <h2>Напрямки роботи</h2>
+            
+            <article class="service-card">
+                <h3>Житлові комплекси</h3>
+                <p>Оцінка шумового фону від транспортних розв'язок, будівництв та інфраструктури.</p>
+            </article>
+
+            <article class="service-card">
+                <h3>Офісні центри</h3>
+                <p>Акустичний аудит робочих зон, шумоізоляція та комфорт працівників.</p>
+            </article>
+
+            <article class="service-card">
+                <h3>Промислові об'єкти</h3>
+                <p>Вимірювання локального шуму обладнання та відповідність екологічним стандартам.</p>
+            </article>
+
+            <div class="image-wrapper">
+                <img src="images/photo2.jpg" alt="Обладнання для вимірювання" class="section-img">
+            </div>
+        </section>
+
+        <!-- Попередження (aside) -->
+        <aside class="warning-box">
+            <span class="warning-tag">УВАГА</span>
+            <h3>Попередження про перевищення шуму</h3>
+            <p>У районі Північного мосту зафіксовано тимчасове перевищення норми шуму на 12 дБ через ремонтні роботи.</p>
+        </aside>
+
+        <!-- Останні вимірювання -->
+        <section id="measurements" class="section-block">
+            <h2>Останні вимірювання</h2>
+            <div class="measurement-item">
+                <span class="m-date">18.10.2026</span>
+                <span class="m-place">Парк Шевченка</span>
+                <span class="m-level">42 дБ</span>
+                <span class="m-status status-ok">Норма</span>
+            </div>
+            <div class="measurement-item">
+                <span class="m-date">17.10.2026</span>
+                <span class="m-place">Промзона #3</span>
+                <span class="m-level">78 дБ</span>
+                <span class="m-status status-high">Перевищення</span>
+            </div>
+        </section>
+
+        <!-- Форма замовлення -->
+        <section id="order" class="section-block">
+            <h2>Форма замовлення дослідження</h2>
+            <form action="#" method="post" class="order-form">
+                <div class="form-group">
+                    <label for="username">Ваше ім'я:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Електронна пошта:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="object-type">Тип об'єкта:</label>
+                    <input type="text" id="object-type" name="object-type" placeholder="ЖК, Офіс, Підприємство">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Опис завдання:</label>
+                    <textarea id="description" name="description" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Надіслати заявку</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Підвал -->
+    <footer>
+        <p><strong>«Акустична варта»</strong> — Моніторинг шумового забруднення</p>
+        <p>Email: info@acoustic-varta.ua | Тел: +380 (44) 123-45-67</p>
+        <p>&copy; 2026 Усі права захищені.</p>
+    </footer>
+
+</body>
+</html>
