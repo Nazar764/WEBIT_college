@@ -1,0 +1,275 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+// Header
+.header {
+  background: v.$color-bg;
+  border-bottom: 1px solid v.$color-border;
+  padding-block: v.$space-md;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: v.$space-md;
+
+    @include m.respond-to(v.$bp-tablet) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo h1 {
+    font-size: 1.25rem;
+    color: v.$color-text;
+  }
+
+  &__slogan {
+    font-size: 0.85rem;
+    color: v.$color-text-muted;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-md;
+
+  &__link {
+    text-decoration: none;
+    color: v.$color-text-muted;
+    font-weight: 500;
+    font-size: 0.95rem;
+
+    &:hover, &--active {
+      color: v.$color-primary;
+    }
+
+    &--active {
+      border-bottom: 2px solid v.$color-primary;
+    }
+  }
+}
+
+// Hero Block
+.hero-section {
+  background: #edf2f7;
+  padding-block: v.$space-xl;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-xl;
+
+  @include m.respond-to(v.$bp-tablet) {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: v.$space-md;
+  }
+
+  p {
+    color: v.$color-text-muted;
+    margin-bottom: v.$space-lg;
+  }
+
+  &__image img {
+    border-radius: v.$radius;
+    max-height: 320px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+// Cards
+.card {
+  background: v.$color-bg;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius;
+  padding: v.$space-md;
+}
+
+.monitoring-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__label {
+    font-size: 0.8rem;
+    color: v.$color-text-muted;
+  }
+
+  &__val {
+    font-size: 1.1rem;
+    margin-block: v.$space-xs;
+  }
+
+  &__sub {
+    font-size: 0.75rem;
+    color: v.$color-text-muted;
+  }
+}
+
+.service-card {
+  h3 {
+    font-size: 1rem;
+    margin-bottom: v.$space-xs;
+  }
+  p {
+    font-size: 0.875rem;
+    color: v.$color-text-muted;
+  }
+}
+
+// Badges
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  width: fit-content;
+
+  &--success {
+    background: v.$color-success-bg;
+    color: v.$color-success-text;
+  }
+
+  &--danger {
+    background: v.$color-danger-bg;
+    color: v.$color-danger-text;
+  }
+}
+
+// Warning Banner
+.warning {
+  background: v.$color-danger-bg;
+  border: 1px solid #fca5a5;
+  border-radius: v.$radius;
+  padding: v.$space-md;
+  color: v.$color-danger-text;
+
+  h2 {
+    font-size: 1.1rem;
+    margin-bottom: v.$space-xs;
+  }
+}
+
+// Table
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  background: v.$color-bg;
+  border-radius: v.$radius;
+  overflow: hidden;
+
+  th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid v.$color-border;
+    font-size: 0.9rem;
+  }
+
+  th {
+    background: v.$color-surface;
+    color: v.$color-text-muted;
+    font-weight: 600;
+  }
+}
+
+// Buttons & Form
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+
+  &--primary {
+    background: v.$color-primary;
+    color: #fff;
+
+    &:hover {
+      background: v.$color-primary-dark;
+    }
+  }
+}
+
+.order-form {
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: v.$space-md;
+
+    @include m.respond-to(v.$bp-tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: v.$space-xs;
+
+    &--full {
+      @include m.respond-to(v.$bp-tablet) {
+        grid-column: 1 / -1;
+      }
+    }
+
+    label {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      padding: 8px 12px;
+      border: 1px solid v.$color-border;
+      border-radius: 6px;
+    }
+  }
+
+  .btn--submit {
+    margin-top: v.$space-md;
+  }
+}
+
+// Footer
+.footer {
+  background: #1a202c;
+  color: #a0aec0;
+  padding-block: v.$space-lg;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: v.$space-md;
+
+    @include m.respond-to(v.$bp-tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  strong {
+    color: #fff;
+  }
+}
+
+.text-danger {
+  color: v.$color-danger-text;
+  font-weight: 600;
+}

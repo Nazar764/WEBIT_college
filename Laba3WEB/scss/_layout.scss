@@ -1,0 +1,51 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.container {
+  @include m.container;
+}
+
+.section {
+  padding-block: v.$space-xl;
+
+  &--compact {
+    padding-block: v.$space-md;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: v.$space-lg;
+    color: v.$color-text;
+  }
+}
+
+// Сітка Моніторингу: 1 -> 2 -> 5 колонок
+.monitoring-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-md;
+
+  @include m.respond-to(v.$bp-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m.respond-to(v.$bp-desktop) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+// Сітка Напрямів: 1 -> 2 -> 4 колонки
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-md;
+
+  @include m.respond-to(v.$bp-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m.respond-to(v.$bp-desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
