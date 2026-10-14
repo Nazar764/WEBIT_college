@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Модульна система моніторингу шуму у Львові.">
+  <title>Акустична варта — Лабораторна робота №5</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#home" aria-label="Акустична варта — на головну">
+        <span class="brand__icon" aria-hidden="true">♫</span>
+        <span>
+          <strong>Акустична варта</strong>
+          <small>Моніторинг міського шуму</small>
+        </span>
+      </a>
+      <nav class="navigation" aria-label="Основна навігація">
+        <a href="#home">Головна</a>
+        <a href="#monitoring">Моніторинг</a>
+        <a href="#about">Про проєкт</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero__content">
+        <p class="eyebrow">Львів · система акустичного моніторингу</p>
+        <h1>Місто, в якому<br><span>комфортно звучати</span></h1>
+        <p class="hero__description">
+          Стежимо за рівнем шуму в районах міста та допомагаємо вчасно
+          помічати перевищення.
+        </p>
+        <a class="button" href="#monitoring">Переглянути датчики <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero__decoration" aria-hidden="true">
+        <span class="sound-wave sound-wave--one"></span>
+        <span class="sound-wave sound-wave--two"></span>
+        <span class="sound-wave sound-wave--three"></span>
+        <span class="hero__number">05</span>
+      </div>
+    </section>
+
+    <section class="monitoring section" id="monitoring">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Дані в реальному часі</p>
+            <h2>Поточний моніторинг</h2>
+          </div>
+          <p class="section-heading__note"><span class="live-dot"></span> Демонстраційні дані</p>
+        </div>
+
+        <div class="statistics" aria-label="Загальна статистика">
+          <article class="stat-card">
+            <span class="stat-card__label">Середній рівень шуму</span>
+            <strong class="stat-card__value" id="average-noise">—</strong>
+            <span class="stat-card__note">по всіх точках спостереження</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-card__label">Активні датчики</span>
+            <strong class="stat-card__value" id="sensor-count">—</strong>
+            <span class="stat-card__note">у трьох районах міста</span>
+          </article>
+          <article class="stat-card stat-card--alert">
+            <span class="stat-card__label">Критичний рівень</span>
+            <strong class="stat-card__value" id="critical-count">—</strong>
+            <span class="stat-card__note">потребують особливої уваги</span>
+          </article>
+        </div>
+
+        <div class="section-heading section-heading--cards">
+          <div>
+            <p class="eyebrow">Мережа спостереження</p>
+            <h2>Датчики міста</h2>
+          </div>
+          <p class="threshold-note">Норма до 55 дБ · Попередження до 70 дБ</p>
+        </div>
+        <div class="sensor-grid" id="sensor-cards" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="container about__inner">
+        <div>
+          <p class="eyebrow">Лабораторна робота №5</p>
+          <h2>Проєктування системи класів у JavaScript</h2>
+        </div>
+        <p>
+          Проєкт демонструє модульну структуру JavaScript, клас датчика шуму,
+          централізовані межі рівнів і сервіс для керування мережею датчиків.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <strong>Акустична варта</strong>
+      <span>Навчальний проєкт · Лабораторна робота №5</span>
+    </div>
+  </footer>
+</body>
+</html>
