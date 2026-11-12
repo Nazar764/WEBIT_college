@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Перелік активних датчиків моніторингу міського шуму у Львові."
+    />
+    <title>Активні сенсори | Акустична варта</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="sensors" aria-labelledby="page-title">
+        <header class="section-heading">
+          <h1 id="page-title">Активні сенсори</h1>
+          <p class="section-description">
+            Секція показує активні сенсори та дає змогу відфільтрувати їх за
+            районом і статусом.
+          </p>
+        </header>
+
+        <div class="filters">
+          <label class="district-filter" for="district-filter">
+            <span>Район</span>
+            <select id="district-filter" name="district">
+              <option value="all">Усі райони</option>
+            </select>
+          </label>
+          <label class="critical-filter" for="critical-filter">
+            <input id="critical-filter" name="critical" type="checkbox" />
+            <span>Тільки критичні</span>
+          </label>
+          <p class="filter-hint" id="filter-hint">
+            Фільтри застосовуються автоматично після зміни значень.
+          </p>
+        </div>
+
+        <div class="sensor-grid" id="sensor-list" aria-live="polite"></div>
+      </section>
+    </main>
+  </body>
+</html>
