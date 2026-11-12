@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Моніторинг рівня міського шуму за даними MockAPI."
+    />
+    <title>Активні сенсори | Акустична варта</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="./dist/sensors.js"></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="sensors" aria-labelledby="page-title">
+        <header class="section-heading">
+          <p class="eyebrow">Акустична варта · Львів</p>
+          <h1 id="page-title">Активні сенсори</h1>
+          <p class="section-description">
+            Дані про сенсори завантажуються з MockAPI та відображаються в картках.
+          </p>
+        </header>
+
+        <p class="load-state" id="load-state" role="status" aria-live="polite">
+          Завантажуємо сенсори...
+        </p>
+        <div class="sensor-grid" id="sensors"></div>
+      </section>
+    </main>
+  </body>
+</html>
